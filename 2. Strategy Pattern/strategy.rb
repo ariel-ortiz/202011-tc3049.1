@@ -26,13 +26,25 @@ class CountGenderStrategy < StudentStrategy
   end
 
   def execute(array)
-    count = 0
-    array.each do |student|
-      if student.gender == @gender
-        count += 1
-      end
-    end
-    count
+    array.count {|student| student.gender == @gender}
+  end
+
+end
+
+class ComputeAverageGPAStrategy < StudentStrategy
+
+  def execute(array)
+    return nil if array.empty?
+    (array.sum {|student| student.gpa }) / array.size.to_f
+  end
+
+end
+
+class BestGPAStrategy < StudentStrategy
+
+  def execute(array)
+    return nil if array.empty?
+    (array.max_by {|student| student.gpa }).name
   end
 
 end
