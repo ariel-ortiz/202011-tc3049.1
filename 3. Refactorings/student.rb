@@ -26,9 +26,9 @@ class Student
     # Nothing reasonable to do if this student has currently no grades.
     return -1 if @grades.empty?
 
-    # A student is worthy of a scholarship if he/she has good grades and
-    # is poor.
-    (average >= MIN_GOOD_GRADE_AVERAGE) and (@anual_income < MAX_POOR_INCOME)
+    good_grades = average >= MIN_GOOD_GRADE_AVERAGE
+    is_poor = @anual_income < MAX_POOR_INCOME
+    good_grades and is_poor
   end
 
   private
