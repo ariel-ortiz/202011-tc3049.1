@@ -31,6 +31,8 @@ class Student
     (average >= MIN_GOOD_GRADE_AVERAGE) and (@anual_income < MAX_POOR_INCOME)
   end
 
+  private
+
   def display_personal_information
     puts "Name: #{ @name } ID: #{ @id }"
     puts "Anual income: #{ @anual_income }"
