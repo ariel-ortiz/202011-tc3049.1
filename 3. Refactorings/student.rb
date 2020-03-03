@@ -1,5 +1,8 @@
 class Student
 
+  MIN_GOOD_GRADE_AVERAGE = 85
+  MAX_POOR_INCOME = 15_000
+
   attr_reader :name, :id, :anual_income
 
   def initialize(name, id, anual_income)
@@ -42,7 +45,7 @@ class Student
       value += grade
     end
     value = value / @grades.size.to_f
-    (value >= 85) and (@anual_income < 15_000)
+    (value >= MIN_GOOD_GRADE_AVERAGE) and (@anual_income < MAX_POOR_INCOME)
   end
 
 end
