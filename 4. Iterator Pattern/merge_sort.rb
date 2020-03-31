@@ -52,3 +52,25 @@ def merge(array1, array2)
 
   merged
 end
+
+a = [4, 8, 15, 16, 23, 42]
+b = [1, 2, 4, 9, 9, 9, 10, 11, 20, 21, 22]
+c = merge(a, b)
+p c
+a = []
+b = []
+c = merge(a, b)
+p c
+a = [4, 6, 7, 10, 15]
+e = a.to_enum
+
+begin
+  p e.next
+  p e.next
+  p e.next
+  p e.next
+  p e.next
+  p e.next
+rescue StopIteration
+  puts "Finished"
+end
