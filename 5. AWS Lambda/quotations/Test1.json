@@ -1,0 +1,6 @@
+{
+  "httpMethod": "GET",
+  "path": "/somepath",
+  "headers": {"Host": "somehost"},
+  "queryStringParameters": {"id": "1"}
+}
