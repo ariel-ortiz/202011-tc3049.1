@@ -15,7 +15,7 @@ POST
 
 {
   "httpMethod": "POST",
-  "body": "{ \"Author\": \"Michael Crithton\", \"Title\": \"Jurassic Park\", \"Year\": 1990}"
+  "body": "{ \"Author\": \"Michael Crichton\", \"Title\": \"Jurassic Park\", \"Year\": 1990}"
 }
 -----------------------------------------------------------
 
